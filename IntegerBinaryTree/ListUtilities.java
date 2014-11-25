@@ -1,9 +1,9 @@
 public class ListUtilities {
-    public static IntegerList arrayToLinkedList(int[] array) {
-        IntegerList intList = new IntegerList();
+    public static IntegerTreeNode arrayToTreeNode(int first, int[] array) {
+        IntegerTreeNode tree = new IntegerTreeNodeImpl(first);
         for (int i = 0; i < array.length; i++) {
-            intList.add(array[i]);
+            tree.add(array[i]);
         }
-        return intList;
+        return tree;
     }
 }
