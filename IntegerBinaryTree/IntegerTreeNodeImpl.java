@@ -58,5 +58,33 @@ public class IntegerTreeNodeImpl implements IntegerTreeNode {
             return left.getMin();
         }
     }
+
+    public String toString() {
+        if (left == null && right == null) {
+            return "[" + this.value + " L[] R[]]";
+        } else if (left != null && right != null) {
+            return "[" + this.value + " L" + left.toString() + " R" + right.toString() + "]";
+        } else if (left!= null) {
+            return "[" + this.value + " L" + left.toString() + "] R[]";
+        } else if (right!= null) {
+            return "[" + this.value + " L[] R" + right.toString() + "]";
+        } else {
+            return "";
+        }
+    }
+
+    public String toStringSimple() {
+        if (left == null && right == null) {
+            return "[" + this.value + "]";
+        } else if (left != null && right != null) {
+            return "[" + this.value + " " + left.toStringSimple() + " " + right.toStringSimple() + "]";
+        } else if (left!= null) {
+            return "[" + this.value + " " + left.toStringSimple() + "]";
+        } else if (right!= null) {
+            return "[" + this.value + " " + right.toStringSimple() + "]";
+        } else {
+            return "";
+        }
+    }
 }
 
