@@ -86,5 +86,17 @@ public class IntegerTreeNodeImpl implements IntegerTreeNode {
             return "";
         }
     }
+
+    public int depth() {
+        if (left == null && right == null) {
+            return 0;
+        } else if (left == null) {
+            return 1 + right.depth();
+        } else if (right == null) {
+            return  1 + left.depth();
+        } else {
+            return Math.max(left.depth(), right.depth());
+        }
+    }
 }
 
