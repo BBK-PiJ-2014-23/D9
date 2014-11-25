@@ -18,4 +18,14 @@ public interface IntegerTreeNode {
      * 
      */
     int getMin();
+    
+    /**
+     * 
+     */
+    String toString();
+    
+    /**
+     * 
+     */
+    String toStringSimple();
 }
