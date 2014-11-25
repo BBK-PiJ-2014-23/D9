@@ -28,4 +28,9 @@ public interface IntegerTreeNode {
      * 
      */
     String toStringSimple();
+    
+    /**
+     * 
+     */
+    int depth();
 }
