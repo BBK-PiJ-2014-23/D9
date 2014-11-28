@@ -9,6 +9,18 @@ public class IntegerTreeNodeImpl implements IntegerTreeNode {
         right = null;
     }
 
+    public int getValue() {
+        return value;
+    }
+    
+    public IntegerTreeNode getLeft() {
+        return left;
+    }
+    
+    public IntegerTreeNode getRight() {
+        return right;
+    }
+    
     public void add(int newNumber) {
         if (newNumber > this.value) {
             if (right == null) {
@@ -98,5 +110,26 @@ public class IntegerTreeNodeImpl implements IntegerTreeNode {
             return Math.max(left.depth(), right.depth());
         }
     }
-}
 
+    public boolean remove(int n) {
+        if (left != null && n == left.getValue()) {
+            left = left.getRight();
+            return true;
+        } else if (right != null && n == right.getValue()) {
+            right = right.getLeft();
+            return true;
+        } else if (n > this.value) {
+            if (right == null) {
+                return false;
+            } else {
+                return right.remove(n);
+            }
+        } else {
+            if (left == null) {
+                return false;
+            } else {
+                return left.remove(n);
+            }
+        }
+    }
+}
