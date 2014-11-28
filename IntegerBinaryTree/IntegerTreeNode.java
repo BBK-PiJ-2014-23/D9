@@ -2,6 +2,21 @@ public interface IntegerTreeNode {
     /**
      * 
      */
+    int getValue();
+    
+    /**
+     * 
+     */
+    IntegerTreeNode getLeft();
+    
+    /**
+     * 
+     */
+    IntegerTreeNode getRight();
+    
+    /**
+     * 
+     */
     void add(int newNumber);
     
     /**
@@ -33,4 +48,9 @@ public interface IntegerTreeNode {
      * 
      */
     int depth();
+    
+    /**
+     * 
+     */
+    boolean remove(int number);
 }
