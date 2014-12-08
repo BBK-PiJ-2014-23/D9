@@ -13,5 +13,6 @@ public class IntegerTreeNodeTester
         tree.remove(11);
         System.out.println(tree.toStringSimple());
         System.out.println(tree.contains(11));
+        System.out.println(tree.countNodes());
     }
 }

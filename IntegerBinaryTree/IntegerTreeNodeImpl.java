@@ -132,4 +132,22 @@ public class IntegerTreeNodeImpl implements IntegerTreeNode {
             }
         }
     }
+    
+    public void rebalance() {
+        int balance = countNodes() / 2;
+        int[] = new int[countNodes();
+        
+    }
+    
+    public int countNodes() {
+        if (left == null && right == null) {
+            return 1;
+        } else if (left == null) {
+            return 1 + right.countNodes();
+        } else if (right == null) {
+            return  1 + left.countNodes();
+        } else {
+            return 1 + left.countNodes() + right.countNodes();
+        }
+    }
 }

@@ -53,4 +53,14 @@ public interface IntegerTreeNode {
      * 
      */
     boolean remove(int number);
+    
+    /**
+     * 
+     */
+    void rebalance();
+    
+    /**
+     * 
+     */
+    int countNodes();
 }
